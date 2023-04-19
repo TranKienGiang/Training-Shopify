@@ -1,0 +1,167 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Browse our latest products",
+            "heading_size": "h0"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "b370eec5-04a0-4708-bcf3-d1126757a64a": {
+      "type": "slideshow",
+      "blocks": {
+        "template--18679112565044__b370eec5-04a0-4708-bcf3-d1126757a64a-168145557653e6ec0b-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/thiet-ke-shop-thoi-trang-nu-4.jpg",
+            "heading": "<strong>Image slide<\/strong>",
+            "heading_size": "h2",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "shopify:\/\/collections\/all",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "accent-2",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "template--18679112565044__b370eec5-04a0-4708-bcf3-d1126757a64a-168145557653e6ec0b-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/havert.jpg",
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--18679112565044__b370eec5-04a0-4708-bcf3-d1126757a64a-168145557653e6ec0b-0",
+        "template--18679112565044__b370eec5-04a0-4708-bcf3-d1126757a64a-168145557653e6ec0b-1"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "ef4d2882-ab77-4d17-b812-cbd77a9df8d9": {
+      "type": "multi-slider-banner",
+      "blocks": {
+        "7fccc2d0-6c1b-46e0-898c-c78727489490": {
+          "type": "slide",
+          "settings": {
+            "image-banner": "shopify:\/\/shop_images\/thiet-ke-shop-thoi-trang-nu-4.jpg",
+            "width-banner": 300,
+            "button-text": "New Arrivals"
+          }
+        },
+        "ca8ceba7-e7b4-4c65-a621-8b72fa405ec4": {
+          "type": "slide",
+          "settings": {
+            "image-banner": "shopify:\/\/shop_images\/download.jpg",
+            "width-banner": 150,
+            "button-text": "New Arrivals"
+          }
+        },
+        "4049916e-425e-4a6d-a71d-3184a8fe8615": {
+          "type": "slide",
+          "settings": {
+            "image-banner": "shopify:\/\/shop_images\/havert.jpg",
+            "width-banner": 150,
+            "button-text": "New Arrivals"
+          }
+        }
+      },
+      "block_order": [
+        "7fccc2d0-6c1b-46e0-898c-c78727489490",
+        "ca8ceba7-e7b4-4c65-a621-8b72fa405ec4",
+        "4049916e-425e-4a6d-a71d-3184a8fe8615"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "featured_collection",
+    "b370eec5-04a0-4708-bcf3-d1126757a64a",
+    "ef4d2882-ab77-4d17-b812-cbd77a9df8d9"
+  ]
+}

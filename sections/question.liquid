@@ -1,0 +1,87 @@
+<section class="question">
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'question-block' %}
+      <div class="questions">
+        <div id="question">
+          <h3 class="content-question">
+            {{ block.settings.question-id }}
+          </h3>
+        </div>
+        <div id="answer" class="hide-content">
+          <p class="content-answer">
+            {{ block.settings.answer-id }}
+          </p>
+        </div>
+      </div>
+  {% else %}
+
+    {% endcase %}
+  {% endfor %}
+  {% for blockButton in section.blocks %}
+    {% case blockButton.type %}
+      {% when 'button-block' %}
+      <a class="button button--primary" href="{{ blockButton.settings.link-button-id }}">
+        {{ blockButton.settings.content-answer-id }}</a>
+  {% else %}
+
+    {% endcase %}
+  {% endfor %}
+</section>
+
+{% schema %}
+  {
+    "name": "Question Contact",
+    "class": "section",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "question-block",
+        "name": "Question Content",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Question",
+            "id": "question-id"
+          }, {
+            "type": "textarea",
+            "label": "Answer",
+            "id": "answer-id"
+          }
+        ]
+      }, {
+        "type": "button-block",
+        "name": "Button Content",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Link Button",
+            "id": "link-button-id"
+          }, {
+            "type": "text",
+            "label": "Content Answer",
+            "id": "content-answer-id"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Question Answer"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  .hide-content {
+    display: none;
+  }
+  .questions.active .hide-content {
+    display: block;
+  }
+  div#question {
+    border: 1px solid;
+    margin-bottom: 10px;
+  }
+</style>

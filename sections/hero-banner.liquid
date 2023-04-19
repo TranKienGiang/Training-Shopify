@@ -1,0 +1,120 @@
+<div class="hero-banner">
+  {% for block in section.blocks %}
+    <div class="img-banner">
+      <img
+        class="img-desktop"
+        style=" display: none"
+        src="{{ block.settings.image-id-desktop | image_url:width: 1920}}"
+        alt="">
+
+      <img
+        class="img-mobile"
+        src="{{ block.settings.image-id-mobile | image_url:width: 600}}"
+        alt="">
+    </div>
+  {% endfor %}
+
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'heading' %}
+      <div class="content-banner">
+        <h1 class="title">{{ block.settings.heading-id }}</h1>
+        {% when 'content' %}
+        <p class="content">
+          {{ block.settings.text-content }}
+        </p>
+        {% when 'link' %}
+        <a class="button button--primary" href="{{ block.settings.text-link }}">Shop Now</a>
+      </div>
+    {% endcase %}
+  {% endfor %}
+</div>
+{% schema %}
+  {
+    "name": "Hero banner",
+    "class": "section",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "heading",
+        "name": "Hero header",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading-id",
+            "label": "label for heading"
+          }
+        ]
+      }, {
+        "type": "image",
+        "name": "image picker",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image-id-mobile",
+            "label": "Image Mobile Picker"
+          }, {
+            "type": "image_picker",
+            "id": "image-id-desktop",
+            "label": "Image Desktop Picker"
+          }
+        ]
+      }, {
+        "type": "content",
+        "name": "text content",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text-content",
+            "label": "Content"
+          }
+        ]
+      }, {
+        "type": "link",
+        "name": "Link content",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text-link",
+            "label": "Link Btn"
+          }
+        ]
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Hero banner"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  .hero-banner {
+    position: relative;
+  }
+
+  img.img-desktop {
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+  }
+  img.img-mobile {
+    width: 100%;
+    height: auto;
+  }
+  .content-banner {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+  }
+  @media only screen and (max-width: 600px) {
+    img.img-mobile {
+      display: block !important;
+    }
+    img.img-desktop {
+      display: none;
+    }
+  }
+</style>

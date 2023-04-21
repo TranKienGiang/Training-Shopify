@@ -3,18 +3,25 @@
     {% case block.type %}
       {% when 'question-block' %}
       <div class="questions">
-        <div id="question">
-          <h3 class="content-question">
-            {{ block.settings.question-id }}
-          </h3>
+        <div class="content">
+          <div id="question">
+            <h3 class="content-question">
+              {{ block.settings.question-id }}
+            </h3>
+          </div>
+          <div class="icon-down">
+            {% render 'icon-arrow-down' %}
+          </div>
+          <div style="display: none;" class="icon-up">
+            {% render 'arrow-up' %}
+          </div>
         </div>
-        <div id="answer" class="hide-content">
-          <p class="content-answer">
+        <div class="content-answer">
+          <p class="answer-content">
             {{ block.settings.answer-id }}
           </p>
         </div>
       </div>
-  {% else %}
 
     {% endcase %}
   {% endfor %}
@@ -74,14 +81,52 @@
 {% endschema %}
 
 <style>
-  .hide-content {
-    display: none;
-  }
-  .questions.active .hide-content {
+  .content-answer {
     display: block;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.2s linear;
   }
   div#question {
-    border: 1px solid;
     margin-bottom: 10px;
+  }
+  .questions {
+    margin: 0 0 10px;
+    cursor: pointer;
+  }
+
+  div#question {
+    margin: 0;
+  }
+  h3.content-question {
+    margin: 0 26px;
+    font-weight: 700;
+  }
+
+  div#question {
+    padding: 12px 24px;
+    width: 100%;
+    border: 1px solid rgb(212, 209, 209);
+  }
+  div.content {
+    width: 100%;
+    display: flex;
+  }
+  .icon-down {
+    display: flex;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(212, 209, 209);
+  }
+  .icon-up {
+    display: flex;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(212, 209, 209);
+  }
+  p.answer-content {
+    margin-left: 50px;
   }
 </style>

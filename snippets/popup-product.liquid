@@ -1,0 +1,100 @@
+<div id="popup1" class="overlay">
+  <div class="image-product">
+    <img
+      class="image-popup"
+      src="https://shopdunk.com/images/thumbs/0007808_iphone-14-pro-max-128gb.png"
+      alt="anh image">
+  </div>
+  <div class="popup">
+    <h2 class="popup-name-product">Simple Data Products</h2>
+    <a class="close" href="#">&times;</a>
+    <p class="popup-price">100.000d</p>
+    <div class="description hideContent">These top-tier SaaS products or services are designed with elements of customization to integrate with an organization's technology stack. They can be extremely complicated to implement and are often priced accordingly. Intended for B2B enterprise sales, this SaaS sales cycle is the longest and most complex. Mid-range to large enterprises are the buyers and the biggest challenge is often creating a consensus among many decision-makers with buying power. This sale requires high-touch technical and sales support along with a team of sales experts, including a Sales Development Representative (SDR or BDR) to nurture and qualify leads and an Account Executive (AE) to conduct the demo and close the sale.</div>
+    <div class="add-to-cart">
+      <input
+        type="number"
+        min="1"
+        class="popup-quantity">
+    </div>
+  </div>
+  <div class="show-more">
+    <a href="#">Show more</a>
+  </div>
+
+</div>
+<style>
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .popup {
+    width: 60%;
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }
+  .popup .content {
+    max-height: 60%;
+    overflow: auto;
+  }
+
+  .hideContent {
+    overflow: hidden;
+    line-height: 1em;
+    height: 2em;
+  }
+  .show-more {
+    padding: 10px 0;
+    text-align: center;
+  }
+  .showContent {
+    line-height: 1em;
+    height: auto;
+  }
+
+  @media screen and (max-width: 700px) {
+    .box {
+      width: 70%;
+    }
+    .popup {
+      width: 70%;
+    }
+  }
+
+  #popup1 {
+    display: flex;
+    width: 40%;
+    height: auto;
+  }
+  .image-product {
+    width: 40%;
+  }
+  img.image-popup {
+    width: 100%;
+    height: auto;
+    margin-top: 70px;
+  }
+</style>

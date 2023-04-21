@@ -1,9 +1,10 @@
 <section class="multi-slider">
+  <h2 style="text-align: center;">Slider Banner</h2>
   <div
     class="swiper mySwiper"
     data-time={{section.settings.time-auto-id}}
     enable-auto={{section.settings.enable-auto-id}}>
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper max-width-800">
       {% for block in section.blocks %}
         {% case block.type %}
           {% when 'banner' %}
@@ -88,6 +89,7 @@
   .swiper-slide {
     text-align: center;
     font-size: 18px;
+    position: relative;
     background: #fff;
     display: flex;
     justify-content: center;
@@ -101,8 +103,15 @@
     object-fit: cover;
   }
   .button-banner {
-    possition: absolute !important;
-    bottom: 10px;
-    left: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .max-width-800 {
+    max-height: 800px;
+  }
+  .multi-slider {
+    margin-top: 30px;
   }
 </style>

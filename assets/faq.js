@@ -1,10 +1,21 @@
 let answers = document.querySelectorAll(".questions");
 answers.forEach((event) => {
     event.addEventListener("click", () => {
-        if (event.classList.contains("active")) {
-            event.classList.remove("active");
+
+        let ans = event.querySelector('.content-answer')
+        let icondown = event.querySelector('.icon-down')
+        let iconup = event.querySelector('.icon-up')
+        event.classList.toggle('open');
+        if(event.classList.contains('open')){
+            ans.style.height = `${ans.scrollHeight}px`
+            icondown.style.display = 'none';
+            iconup.style.display = 'flex';
         } else {
-            event.classList.add("active");
+            ans.style.height = '0px';
+            icondown.style.display = 'flex';
+            iconup.style.display = 'none';
+
         }
+
     });
 });

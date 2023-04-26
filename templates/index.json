@@ -128,24 +128,30 @@
           "type": "slide",
           "settings": {
             "image-banner": "shopify:\/\/shop_images\/thiet-ke-shop-thoi-trang-nu-4.jpg",
-            "width-banner": 300,
-            "button-text": "New Arrivals"
+            "width-banner": 33,
+            "button-text": "New Arrivals",
+            "possition-top": 10,
+            "possition-left": 10
           }
         },
         "ca8ceba7-e7b4-4c65-a621-8b72fa405ec4": {
           "type": "slide",
           "settings": {
             "image-banner": "shopify:\/\/shop_images\/download.jpg",
-            "width-banner": 150,
-            "button-text": "New Arrivals"
+            "width-banner": 33,
+            "button-text": "New Arrivals",
+            "possition-top": 10,
+            "possition-right": 10
           }
         },
         "4049916e-425e-4a6d-a71d-3184a8fe8615": {
           "type": "slide",
           "settings": {
             "image-banner": "shopify:\/\/shop_images\/havert.jpg",
-            "width-banner": 150,
-            "button-text": "New Arrivals"
+            "width-banner": 33,
+            "button-text": "New Arrivals",
+            "possition-right": 10,
+            "possition-bottom": 10
           }
         }
       },
@@ -156,12 +162,57 @@
       ],
       "settings": {
       }
+    },
+    "11399a78-e66d-4a24-a3cb-a1fd876a30be": {
+      "type": "slider-banner",
+      "blocks": {
+        "850b1f1c-531e-4184-acf7-29df75eadf97": {
+          "type": "banner",
+          "settings": {
+            "banner-content-id": "Banner 1",
+            "img-banner-id": "shopify:\/\/shop_images\/slide3.jpg"
+          }
+        },
+        "ffca9081-6e98-48bd-ba98-a56ed4fa6227": {
+          "type": "banner",
+          "settings": {
+            "banner-content-id": "Banner 2",
+            "img-banner-id": "shopify:\/\/shop_images\/slide1.jpg"
+          }
+        },
+        "189b3a5e-5b92-4f60-9643-e4ad70df05a7": {
+          "type": "banner",
+          "settings": {
+            "banner-content-id": "Banner 3",
+            "img-banner-id": "shopify:\/\/shop_images\/slide2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "850b1f1c-531e-4184-acf7-29df75eadf97",
+        "ffca9081-6e98-48bd-ba98-a56ed4fa6227",
+        "189b3a5e-5b92-4f60-9643-e4ad70df05a7"
+      ],
+      "settings": {
+        "time-auto-id": 3000,
+        "enable-auto-id": true
+      }
+    },
+    "82788482-6c49-4317-b2d1-cecdd0ffeca9": {
+      "type": "featured-collection-test",
+      "settings": {
+        "title": "Featured collection",
+        "collection": "frontpage",
+        "item-in-row": 4
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
     "b370eec5-04a0-4708-bcf3-d1126757a64a",
-    "ef4d2882-ab77-4d17-b812-cbd77a9df8d9"
+    "ef4d2882-ab77-4d17-b812-cbd77a9df8d9",
+    "11399a78-e66d-4a24-a3cb-a1fd876a30be",
+    "82788482-6c49-4317-b2d1-cecdd0ffeca9"
   ]
 }

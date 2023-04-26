@@ -1,27 +1,37 @@
-<div id="popup1" class="overlay">
-  <div class="image-product">
-    <img
-      class="image-popup"
-      src="https://shopdunk.com/images/thumbs/0007808_iphone-14-pro-max-128gb.png"
-      alt="anh image">
-  </div>
-  <div class="popup">
-    <h2 class="popup-name-product">Simple Data Products</h2>
-    <a class="close" href="#">&times;</a>
-    <p class="popup-price">100.000d</p>
-    <div class="description hideContent">These top-tier SaaS products or services are designed with elements of customization to integrate with an organization's technology stack. They can be extremely complicated to implement and are often priced accordingly. Intended for B2B enterprise sales, this SaaS sales cycle is the longest and most complex. Mid-range to large enterprises are the buyers and the biggest challenge is often creating a consensus among many decision-makers with buying power. This sale requires high-touch technical and sales support along with a team of sales experts, including a Sales Development Representative (SDR or BDR) to nurture and qualify leads and an Account Executive (AE) to conduct the demo and close the sale.</div>
-    <div class="add-to-cart">
-      <input
-        type="number"
-        min="1"
-        class="popup-quantity">
+{%- assign collection = collections[section.settings.collection] -%}
+{% for product in collection.products %}
+  <div id="popup1" class="none-data">
+    <div class="image-product">
+      <img
+        class="image-popup"
+        src=""
+        alt="anh image">
+    </div>
+    <div class="popup">
+      <h2 class="popup-name-product"></h2>
+      <a class="close" href="#">&times;</a>
+      <p class="popup-price"></p>
+      <div class="description"></div>
+      <div id="content-variants" class="content-variants">
+        <label for="SingleOptionSelector-0">Select a options</label>
+        <select
+          id="SingleOptionSelector-0"
+          class="single-option-selector single-option-selector-product-template product-form__input"
+          data-index="option1"
+          name="id"></select>
+      </div>
+
+      <div class="quantity-to-cart">
+        <input
+          type="number"
+          value="0"
+          min="1"
+          class="popup-quantity">
+      </div>
+      <button id="add-to-cart-popup" class="add-to-cart">Add To Cart</button>
     </div>
   </div>
-  <div class="show-more">
-    <a href="#">Show more</a>
-  </div>
-
-</div>
+{% endfor %}
 <style>
   .overlay:target {
     visibility: visible;
@@ -30,18 +40,12 @@
 
   .popup {
     width: 60%;
-    margin: 70px auto;
+    margin: 30px auto;
     padding: 20px;
     background: #fff;
     border-radius: 5px;
     position: relative;
     transition: all 5s ease-in-out;
-  }
-
-  .popup h2 {
-    margin-top: 0;
-    color: #333;
-    font-family: Tahoma, Arial, sans-serif;
   }
   .popup .close {
     position: absolute;
@@ -61,20 +65,6 @@
     overflow: auto;
   }
 
-  .hideContent {
-    overflow: hidden;
-    line-height: 1em;
-    height: 2em;
-  }
-  .show-more {
-    padding: 10px 0;
-    text-align: center;
-  }
-  .showContent {
-    line-height: 1em;
-    height: auto;
-  }
-
   @media screen and (max-width: 700px) {
     .box {
       width: 70%;
@@ -83,10 +73,22 @@
       width: 70%;
     }
   }
+  .none-data {
+    display: none;
+  }
 
-  #popup1 {
+  .flex-data {
     display: flex;
-    width: 40%;
+  }
+  #popup1 {
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background: white;
     height: auto;
   }
   .image-product {
@@ -95,6 +97,29 @@
   img.image-popup {
     width: 100%;
     height: auto;
-    margin-top: 70px;
+    margin: 30px auto;
+  }
+  section {
+    position: relative;
+  }
+  .description {
+    font-size: 18px;
+  }
+  .popup-quantity {
+    font-size: 20px;
+  }
+  .popup .add-to-cart {
+    background-color: #4CAF50;
+    width: auto;
+    height: 30px;
+    cursor: pointer;
+  }
+  p.popup-price {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .quantity-to-cart {
+    margin: 15px 0;
   }
 </style>

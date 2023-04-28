@@ -1,7 +1,7 @@
 const selectorSwiper = document.querySelector('.mySwiper');
 const getTime = selectorSwiper.getAttribute('data-time');
 const getEnabled = selectorSwiper.getAttribute('enable-auto');
-var swiper = new Swiper(".swiper", {
+var swiper = new Swiper(".swipers", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
@@ -20,3 +20,12 @@ var swiper = new Swiper(".swiper", {
 if (getEnabled === "false") {
     swiper.autoplay.stop();
 }
+
+
+const swiperCollection = new Swiper('.swiper-collection', {
+    slidesPerView: 4,
+    spaceBetween: 12,
+    pagination: {
+        el: ".swiper-pagination",
+      }
+});

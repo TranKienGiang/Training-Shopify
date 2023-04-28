@@ -31,6 +31,7 @@ items.forEach((event) => {
                 dataType: 'json',
                 success: function (data) {
                     $('.overlay').css("display", "none");
+                    $('.gradient').css("overflow", "auto");
                     $('#popup1').removeClass('flex-data');
                     $('#popup1').addClass('none-data');
                     jQuery.getJSON('/cart.js', function (cart) {

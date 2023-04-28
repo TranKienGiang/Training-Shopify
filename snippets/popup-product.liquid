@@ -1,36 +1,67 @@
 {%- assign collection = collections[section.settings.collection] -%}
 {% for product in collection.products %}
-  <div id="popup1" class="none-data">
-    <div class="image-product">
-      <img
-        class="image-popup"
-        src=""
-        alt="anh image">
-    </div>
-    <div class="popup">
-      <h2 class="popup-name-product"></h2>
-      <a class="close" href="#">&times;</a>
-      <p class="popup-price"></p>
-      <div class="description"></div>
-      <div id="content-variants" class="content-variants">
-        <label for="SingleOptionSelector-0">Select a options</label>
-        <select
-          id="SingleOptionSelector-0"
-          class="single-option-selector single-option-selector-product-template product-form__input"
-          data-index="option1"
-          name="id"></select>
-      </div>
-
-      <div class="quantity-to-cart">
-        <input
-          type="number"
-          value="0"
-          min="1"
-          class="popup-quantity">
-      </div>
-      <button id="add-to-cart-popup" class="add-to-cart">Add To Cart</button>
-    </div>
+<div id="popup1" class="none-data">
+  <div class="image-product">
+    <img class="image-popup" src="" alt="anh image">
   </div>
+  <div class="popup">
+    <h2 class="popup-name-product"></h2>
+    <a class="close" href="#">&times;</a>
+    <p class="popup-price"></p>
+    <div class="description"></div>
+    <div id="content-variants" class="content-variants">
+      <label class="fz-16" for="SingleOptionSelector-0 ">Select a options:</label>
+      <select id="SingleOptionSelector-0"
+        class="single-option-selector single-option-selector-product-template product-form__input" data-index="option1"
+        name="id"></select>
+    </div>
+
+    <div class="quantity-to-cart">
+      <div id="Quantity-Form-template--18767417409844__main" class="product-form__input product-form__quantity">
+        <label class="quantity__label form__label label_quantity" for="Quantity-template--18767417409844__main">
+          Quantity
+          <span class="quantity__rules-cart no-js-hidden hidden">
+            <span class="loading-overlay hidden">
+              <span class="loading-overlay__spinner">
+                <svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                </svg>
+              </span>
+            </span>
+            <span>(<span class="quantity-cart">0</span> in cart)</span>
+          </span>
+        </label>
+        <quantity-input class="quantity">
+          <button class="quantity__button no-js-hidden disabled" name="minus" type="button">
+            <span class="visually-hidden">Decrease quantity for Sam Sung Galaxy Zflip 4 256G</span>
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-minus"
+              fill="none" viewBox="0 0 10 2">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M.5 1C.5.7.7.5 1 .5h8a.5.5 0 110 1H1A.5.5 0 01.5 1z"
+                fill="currentColor">
+              </path>
+            </svg>
+          </button>
+          <input class="popup-quantity quantity__input" type="number" name="quantity"
+            id="Quantity-template--18767417409844__main" data-cart-quantity="0" data-min="1" min="1" step="1" value="1"
+            form="product-form-template--18767417409844__main" max="null">
+          <button class="quantity__button no-js-hidden" name="plus" type="button">
+            <span class="visually-hidden">Increase quantity for Sam Sung Galaxy Zflip 4 256G</span>
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-plus"
+              fill="none" viewBox="0 0 10 10">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M1 4.51a.5.5 0 000 1h3.5l.01 3.5a.5.5 0 001-.01V5.5l3.5-.01a.5.5 0 00-.01-1H5.5L5.49.99a.5.5 0 00-1 .01v3.5l-3.5.01H1z"
+                fill="currentColor">
+              </path>
+            </svg>
+          </button>
+        </quantity-input>
+        <div class="quantity__rules caption no-js-hidden"></div>
+      </div>
+    </div>
+    <a href="" id="add-to-cart-popup" class="add-to-cart">Add To Cart</a>
+  </div>
+</div>
 {% endfor %}
 <style>
   .overlay:target {
@@ -47,6 +78,7 @@
     position: relative;
     transition: all 5s ease-in-out;
   }
+
   .popup .close {
     position: absolute;
     top: 20px;
@@ -57,9 +89,11 @@
     text-decoration: none;
     color: #333;
   }
+
   .popup .close:hover {
     color: #06D85F;
   }
+
   .popup .content {
     max-height: 60%;
     overflow: auto;
@@ -69,10 +103,12 @@
     .box {
       width: 70%;
     }
+
     .popup {
       width: 70%;
     }
   }
+
   .none-data {
     display: none;
   }
@@ -80,6 +116,7 @@
   .flex-data {
     display: flex;
   }
+
   #popup1 {
     width: 70%;
     top: 50%;
@@ -87,33 +124,33 @@
     z-index: 100;
     border-radius: 20px;
     transform: translate(-50%, -50%);
-    position: absolute;
+    position: fixed;
     background: white;
     height: auto;
   }
+
   .image-product {
     width: 40%;
   }
+
   img.image-popup {
     width: 100%;
     height: auto;
     margin: 30px auto;
   }
+
   section {
     position: relative;
   }
+
   .description {
     font-size: 18px;
   }
+
   .popup-quantity {
     font-size: 20px;
   }
-  .popup .add-to-cart {
-    background-color: #4CAF50;
-    width: auto;
-    height: 30px;
-    cursor: pointer;
-  }
+
   p.popup-price {
     font-size: 18px;
     font-weight: 600;
@@ -121,5 +158,17 @@
 
   .quantity-to-cart {
     margin: 15px 0;
+  }
+
+
+  .label_quantity {
+    font-size: 16px;
+  }
+  .fz-16 {
+    font-size: 16px;
+  }
+
+  #SingleOptionSelector-0 {
+    margin-left: 6px;
   }
 </style>

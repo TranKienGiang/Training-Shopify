@@ -1,13 +1,14 @@
-<section class="featured-collection">
+<section class="featured-collection swiper swiper-collection">
 
   {% if section.settings.title != blank %}
     <h2 class="featured-collection__title">{{ section.settings.title | escape }}</h2>
   {% endif %}
 
   {%- assign collection = collections[section.settings.collection] -%}
-<div class="items">
+  
+<div class="items swiper-wrapper">
   {% for product in collection.products limit: 6 %}
-    <div class="item">
+    <div class="item swiper-slide">
       <div>
         <div class="image-item">
           <img
@@ -17,14 +18,14 @@
         </div>
         <div class="action-items">
           <ul class="list-ul-items">  
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24" fill="none">
+            <li class="add-to-favorite">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none">
               <path d="M12 9.75C12.4142 9.75 12.75 10.0858 12.75 10.5V12.25H14.5C14.9142 12.25 15.25 12.5858 15.25 13C15.25 13.4142 14.9142 13.75 14.5 13.75H12.75V15.5C12.75 15.9142 12.4142 16.25 12 16.25C11.5858 16.25 11.25 15.9142 11.25 15.5V13.75H9.5C9.08579 13.75 8.75 13.4142 8.75 13C8.75 12.5858 9.08579 12.25 9.5 12.25H11.25V10.5C11.25 10.0858 11.5858 9.75 12 9.75Z" fill="#000000"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8.4 5.25C5.61914 5.25 3.25 7.3293 3.25 10.0298C3.25 11.8797 4.03888 13.5064 5.13182 14.8815C6.22287 16.2543 7.65005 17.4193 9.01653 18.366C9.53846 18.7276 10.0665 19.0611 10.5497 19.3072C11.0035 19.5383 11.5253 19.75 12 19.75C12.4747 19.75 12.9965 19.5383 13.4503 19.3072C13.9335 19.0611 14.4615 18.7276 14.9835 18.366C16.35 17.4193 17.7771 16.2543 18.8682 14.8815C19.9611 13.5064 20.75 11.8797 20.75 10.0298C20.75 7.3293 18.3809 5.25 15.6 5.25C14.1665 5.25 12.9052 5.92214 12 6.79183C11.0948 5.92214 9.83347 5.25 8.4 5.25ZM4.75 10.0298C4.75 8.2791 6.32075 6.75 8.4 6.75C9.59415 6.75 10.7092 7.46342 11.4054 8.36892C11.5474 8.55356 11.7671 8.66176 12 8.66176C12.2329 8.66176 12.4526 8.55356 12.5946 8.36892C13.2908 7.46342 14.4058 6.75 15.6 6.75C17.6792 6.75 19.25 8.2791 19.25 10.0298C19.25 11.4333 18.6542 12.74 17.6939 13.9482C16.7317 15.1588 15.4371 16.2269 14.1293 17.133C13.6344 17.4758 13.1683 17.7675 12.7695 17.9706C12.3414 18.1886 12.0933 18.25 12 18.25C11.9067 18.25 11.6586 18.1886 11.2305 17.9706C10.8317 17.7675 10.3656 17.4758 9.87074 17.133C8.56292 16.2269 7.26828 15.1588 6.30609 13.9482C5.34579 12.74 4.75 11.4333 4.75 10.0298Z" fill="#000000"/>
               </svg>
             </li>
-            <li>
-              <svg image-url = "{{product.featured_image | img_url: 'master'}}"  price = "{{product.price | money_with_currency }}" description = "{{product.description}}"  handle_product={{product.handle}}  item-id={{product.selected_or_first_available_variant.id}} class="popup-collection" xmlns="http://www.w3.org/2000/svg" fill="#000000" width="16px" height="16px" viewBox="0 0 32 32" version="1.1">
+            <li class="open-quick-view">
+              <svg image-url = "{{product.featured_image | img_url: 'master'}}"  price = "{{product.price | money_with_currency }}" description = "{{product.description}}"  handle_product={{product.handle}}  item-id={{product.selected_or_first_available_variant.id}} class="quick-view-open" xmlns="http://www.w3.org/2000/svg" fill="#000000" width="18px" height="18px" viewBox="0 0 32 32" version="1.1">
               <title>plus-lens</title>
               <path d="M0 13.024q0 2.656 1.024 5.088t2.784 4.128 4.16 2.784 5.056 1.024q3.616 0 6.816-1.952l7.040 7.040q0.864 0.864 2.112 0.864t2.144-0.864 0.864-2.112-0.864-2.144l-7.072-7.040q1.984-3.2 1.984-6.816 0-2.624-1.024-5.056t-2.784-4.16-4.16-2.752-5.056-1.056q-2.656 0-5.056 1.056t-4.16 2.752-2.784 4.16-1.024 5.056zM4 13.024q0-2.432 1.216-4.512t3.296-3.296 4.512-1.216q1.824 0 3.488 0.704t2.88 1.952 1.92 2.848 0.736 3.52-0.736 3.52-1.92 2.88-2.88 1.92-3.488 0.704q-2.432 0-4.512-1.216t-3.296-3.264-1.216-4.544zM8.032 14.016h4v4h2.016v-4h4v-2.016h-4v-4h-2.016v4h-4v2.016z"/>
               </svg>
@@ -32,36 +33,43 @@
           </ul>
         </div>
       </div>
-      <a href="{{ product.url | within: collection }}" class="featured-collection-item">
-        <p class=" m-l-10 m-t-40">
-            {{ product.title | escape }}
-        </p>  
-      </a>
-      <p class="m-l-10">
-        {% if product.compare_at_price > product.price %}
-            Sale
-        {%endif %}
-      </p>
-      <div class="add-cart m-l-10 " data-product = {{product.variants.size}}>
-        
-        {% if product.variants.size <= 1%}
-          <button quantity="1" item-id={{product.selected_or_first_available_variant.id}} id="add-to-cart-button" class="add-to-cart">Add To Cart</button>
+      {% if product.compare_at_price > product.price %}
+        <div class="badge-product">
+          <p class="badge-content">
+                Sale
+          </p>
+        </div>
+      {%endif %}
+      <div class="product-infor">
+        <a href="{{ product.url | within: collection }}" class="featured-collection-item">
+          <p class="m-t-40 name-product">
+              {{ product.title | escape }}
+          </p>  
+        </a>
+        <div class="add-cart" sold = {{product}} data-product = {{product.variants.size}}>
+        {% if product.available == true %}
+          {% if product.variants.size <= 1%}
+            <a href="" quantity="1" item-id={{product.selected_or_first_available_variant.id}} id="add-to-cart-button" class="add-to-cart">Add To Cart</a>
+          {% else %}
+            <a class="add-to-options" href="{{ product.url | within: collection }}"> Add to Options</a>
+          {%endif %}
         {% else %}
-          <a class="add-to-options" href="{{ product.url | within: collection }}"> Add to Options</a>
-        {%endif %}
-      </div>
-      <div class="price-products m-l-10">
-        {% if product.compare_at_price > product.price %}
-          <span>
-            Giá Giảm : {{ product.price | money_with_currency }}
-          </span>
-          </br>
-          <span>
-            Giá Bán : <s>{{ product.compare_at_price | money_with_currency }}</s>
-          </span>
-        {% else %}
-            Giá Bán : {{ product.compare_at_price | money_with_currency}}
+        <a class="add-to-cart sold-out" href="{{ product.url | within: collection }}"> Sold Out</a>
         {% endif %}
+        </div>
+        <div class="price-products">
+          {% if product.compare_at_price > product.price %}
+            <span>
+              Giá Giảm : {{ product.price | money_with_currency }}
+            </span>
+            </br>
+            <span>
+              Giá Bán : <s>{{ product.compare_at_price | money_with_currency }}</s>
+            </span>
+          {% else %}
+              Giá Bán : {{ product.compare_at_price | money_with_currency}}
+          {% endif %}
+        </div>
       </div>
     </div>
   {% else %}
@@ -76,7 +84,7 @@
       </a>
     {% endfor %}
   {% endfor %}
-  </div>
+</div>
     {% render 'popup-product' %}
 </section>
 
@@ -111,8 +119,13 @@
 <style>
 
 .item {
-    border: 1px solid black;
-    padding: 12px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    height: 650px ;
+    padding-left: 12px;
+    max-height: 650px;
+    border-radius: 12px;
+    position: relative;
   }
   .img-product-item {
     width: 100%;
@@ -121,11 +134,6 @@
   }
   .featured-collection__title {
     text-align: center;
-  }
-  .items {
-    display: grid;
-    grid-template-columns: repeat({{section.settings.item-in-row}},1fr);
-    gap: 12px;
   }
   .add-to-cart,.add-to-options{
     background-color: #4CAF50;
@@ -140,16 +148,16 @@
   }
   ul.list-ul-items {
     display: none;
+    align-items: center;
     padding: 0;
+    margin-bottom: 10px;
   }
   .list-ul-items li {
     cursor: pointer;
     list-style: none;
     margin: 0 10px;
   }
-  div.item:hover ul {
-    display: flex;
-  }
+
   .m-l-10 {
     margin-left: 10px;
   }
@@ -157,7 +165,62 @@
     margin-top: 40px;
   }
 
+  div.item:hover ul {
+    display: flex;
+  }
   .action-items {
     position: absolute;
+  }
+
+  div.image-item {
+    max-height: 440px;
+    height: 440px;
+  }
+
+  .badge-content {
+    margin: 0;
+  }
+
+
+  .badge-product {
+    position: absolute;
+    top: 10px;
+    background-color: gold;
+    border-radius: 20px;
+    padding: 3px 15px;
+}
+
+
+a.featured-collection-item {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+div.add-cart {
+  margin: 12px 0px;
+}
+
+.name-product {
+  font-weight: 600;
+  color: black;
+
+}
+
+.add-to-favorite {
+  margin-left: 0px !important;
+}
+.sold-out {
+  pointer-events: none;
+}
+
+.swiper-slide {
+  display: block;
+}
+
+  .items {
+    margin: 10px 10px;
+  }
+  .featured-collection {
+    z-index: unset;
   }
 </style>

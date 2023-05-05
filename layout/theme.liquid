@@ -438,6 +438,7 @@
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
+    {% render 'mini-cart' %}
     <style>
       .overlay {
         position: fixed;
@@ -448,7 +449,7 @@
         right: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.5);
-        z-index: 2;
+        z-index: 5;
         cursor: pointer;
       }
     </style>
@@ -505,6 +506,7 @@
     </script>
 
     <script src="{{ 'add-to-cart.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'minicart.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'swiper-element-bundle.min.js' | asset_url }}" defer="defer"></script>
 
     <script src="{{ 'popup-collection.js' | asset_url }}" defer="defer"></script>

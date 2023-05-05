@@ -51,7 +51,7 @@
           {% if product.variants.size <= 1%}
             <a href="" quantity="1" item-id={{product.selected_or_first_available_variant.id}} id="add-to-cart-button" class="add-to-cart">Add To Cart</a>
           {% else %}
-            <a class="add-to-options" href="{{ product.url | within: collection }}"> Add to Options</a>
+            <a class="add-to-options" href="{{ product.url | within: collection }}"> Select Options</a>
           {%endif %}
         {% else %}
         <a class="add-to-cart sold-out" href="{{ product.url | within: collection }}"> Sold Out</a>
@@ -135,12 +135,21 @@
   .featured-collection__title {
     text-align: center;
   }
-  .add-to-cart,.add-to-options{
+  .add-to-cart{
     background-color: #4CAF50;
     text-decoration: none;
     color: white;
     padding: 8px 8px;
-    border-radius: 4px;
+    border-radius: 6px;
+    border: 2px solid white;
+  }
+
+  .add-to-options {
+    background-color: #5bc0de;
+    text-decoration: none;
+    color: white;
+    padding: 8px 8px;
+    border-radius: 6px;
     border: 2px solid white;
   }
   .add-to-cart {
@@ -210,6 +219,11 @@ div.add-cart {
   margin-left: 0px !important;
 }
 .sold-out {
+  padding: 8px 8px;
+  background-color: gray;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
   pointer-events: none;
 }
 

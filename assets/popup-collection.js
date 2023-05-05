@@ -30,9 +30,7 @@ actions.forEach((event) => {
                 }
                 if(lenth_variants > 1){
                     $.each(product.variants, function( key, variant ) {
-                        $html_popup += "<option value="+variant.id+">"
-                            +variant.title+
-                          "</option>";
+                        $html_popup += `<option value=${variant.id}>${variant.title}</option>`;
                     });
                     $('#SingleOptionSelector-0').html($html_popup);
                     $('#content-variants').css("display", "flex");

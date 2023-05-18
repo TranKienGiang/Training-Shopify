@@ -205,6 +205,39 @@
         "collection": "frontpage",
         "item-in-row": 4
       }
+    },
+    "4dc9e719-f261-4d7c-a0dc-68a8afb14ba3": {
+      "type": "question",
+      "blocks": {
+        "6bc83b19-cdd1-4dcb-9112-a4113c3c799f": {
+          "type": "question-block",
+          "settings": {
+            "question-id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "answer-id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "278df1c7-8de1-429f-b63f-9b1f9e120102": {
+          "type": "question-block",
+          "settings": {
+            "question-id": "aaaaaaaaaaaaaaaaaaaaaa",
+            "answer-id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        },
+        "4fb9b5f3-524f-4cbd-8838-9dab0fad095b": {
+          "type": "question-block",
+          "settings": {
+            "question-id": "cccccccccccccccccccccccccccccccccccccccccc",
+            "answer-id": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        }
+      },
+      "block_order": [
+        "6bc83b19-cdd1-4dcb-9112-a4113c3c799f",
+        "278df1c7-8de1-429f-b63f-9b1f9e120102",
+        "4fb9b5f3-524f-4cbd-8838-9dab0fad095b"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -213,6 +246,7 @@
     "b370eec5-04a0-4708-bcf3-d1126757a64a",
     "ef4d2882-ab77-4d17-b812-cbd77a9df8d9",
     "11399a78-e66d-4a24-a3cb-a1fd876a30be",
-    "82788482-6c49-4317-b2d1-cecdd0ffeca9"
+    "82788482-6c49-4317-b2d1-cecdd0ffeca9",
+    "4dc9e719-f261-4d7c-a0dc-68a8afb14ba3"
   ]
 }

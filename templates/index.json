@@ -205,31 +205,6 @@
         "collection": "frontpage",
         "item-in-row": 4
       }
-    },
-    "00b931ee-a6bf-4a42-af2f-5fd8fc1bc85a": {
-      "type": "question",
-      "blocks": {
-        "d7383e9e-73a2-4fbb-9cec-7d50f55b9063": {
-          "type": "question-block",
-          "settings": {
-            "question-id": "aaaaaaaaaaaaaa",
-            "answer-id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdafa"
-          }
-        },
-        "9f82ea67-16c4-4063-b12a-b7bea7363c1a": {
-          "type": "question-block",
-          "settings": {
-            "question-id": "gaeddddahadhhadf",
-            "answer-id": "asdfasgfasgasgasdgsfasasdfasgfasgasgasdgsfasasdfasgfasgasgasdgsfasasdfasgfasgasgasdgsfasasdfasgfasgasgasdgsfasasdfasgfasgasgasdgsfasasdfasgfasgasgasdgsfasasdfasgfasgasgasdgsfasasdfasgfasgasgasdgsfasasdfasgfasgasgasdgsfas"
-          }
-        }
-      },
-      "block_order": [
-        "d7383e9e-73a2-4fbb-9cec-7d50f55b9063",
-        "9f82ea67-16c4-4063-b12a-b7bea7363c1a"
-      ],
-      "settings": {
-      }
     }
   },
   "order": [
@@ -238,7 +213,6 @@
     "b370eec5-04a0-4708-bcf3-d1126757a64a",
     "ef4d2882-ab77-4d17-b812-cbd77a9df8d9",
     "11399a78-e66d-4a24-a3cb-a1fd876a30be",
-    "82788482-6c49-4317-b2d1-cecdd0ffeca9",
-    "00b931ee-a6bf-4a42-af2f-5fd8fc1bc85a"
+    "82788482-6c49-4317-b2d1-cecdd0ffeca9"
   ]
 }

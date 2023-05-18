@@ -8,6 +8,7 @@ answers.forEach((event) => {
         event.classList.toggle('open');
         if(event.classList.contains('open')){
             ans.style.height = `${ans.scrollHeight}px`
+            $('.content').removeClass('open');
             icondown.style.display = 'none';
             iconup.style.display = 'flex';
         } else {

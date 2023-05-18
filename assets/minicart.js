@@ -15,6 +15,28 @@ itemsCart.forEach((event) => {
                 data: data,
                 dataType: 'json',
                 success: function (data) {
+                    $( document ).ready(function freeShip () {
+                        var gressFreeship = 200000000;
+                        $.ajax({
+                            type: 'GET',
+                            url: '/cart.json',
+                            dataType: 'json',
+                            success: function(data) { 
+                                var quantity = (data.total_price)/100;
+                                const widthProgess = (quantity / gressFreeship)*100;
+                                $(".value-progess").css("width", `${widthProgess}%`);
+                                const still_freeship = (gressFreeship -quantity);
+                                console.log(still_freeship, 'giam');
+                                if (still_freeship > 0) { 
+                                    var still_freeship_Vnd = still_freeship.toLocaleString('it-IT', {style : 'currency', currency : 'VND'});
+                                    $('.title-free-shiping').text(`Just ${still_freeship_Vnd} away from free shipping!`) 
+                                }
+                                else {
+                                    $('.title-free-shiping').text(` Your order is eligible for free shipping!`);
+                                }
+                            }
+                        });
+                    });
                     $.ajax({
                         type: 'GET',
                         url: '/cart.json',
@@ -58,6 +80,28 @@ itemsCartPlus.forEach((event) => {
             data: data,
             dataType: 'json',
             success: function (data) {
+                $( document ).ready(function freeShip () {
+                    var gressFreeship = 200000000;
+                    $.ajax({
+                        type: 'GET',
+                        url: '/cart.json',
+                        dataType: 'json',
+                        success: function(data) { 
+                            var quantity = (data.total_price)/100;
+                            const widthProgess = (quantity / gressFreeship)*100;
+                            $(".value-progess").css("width", `${widthProgess}%`);
+                            const still_freeship = (gressFreeship -quantity);
+                            console.log(still_freeship, 'tang');
+                            if (still_freeship > 0) { 
+                                var still_freeship_Vnd = still_freeship.toLocaleString('it-IT', {style : 'currency', currency : 'VND'});
+                                $('.title-free-shiping').text(`Just ${still_freeship_Vnd} away from free shipping!`) 
+                            }
+                            else {
+                                $('.title-free-shiping').text(` Your order is eligible for free shipping!`);
+                            }
+                        }
+                    });
+                });
                 $.ajax({
                     type: 'GET',
                     url: '/cart.json',
@@ -138,7 +182,28 @@ $( ".close-minicart" ).on( "click", function(e) {
 });
 
 
-document.querySelector('#checkout').addEventListener('click', function (event) {
+document.querySelector('#checkout').addEventListener('click', function () {
     window.location.href = '/checkout';
 });
 
+$( document ).ready(function freeShip () {
+    var gressFreeship = 200000000;
+    $.ajax({
+        type: 'GET',
+        url: '/cart.json',
+        dataType: 'json',
+        success: function(data) { 
+            var quantity = (data.total_price)/100;
+            const widthProgess = (quantity / gressFreeship)*100;
+            $(".value-progess").css("width", `${widthProgess}%`);
+            const still_freeship = (gressFreeship -quantity);
+            if (still_freeship > 0) { 
+                still_freeship_Vnd = still_freeship.toLocaleString('it-IT', {style : 'currency', currency : 'VND'});
+                $('.title-free-shiping').text(`Just ${still_freeship_Vnd} away from free shipping!`) 
+            }
+            else {
+                $('.title-free-shiping').text(` Your order is eligible for free shipping!`);
+            }
+        }
+    });
+});

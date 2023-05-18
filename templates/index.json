@@ -205,55 +205,6 @@
         "collection": "frontpage",
         "item-in-row": 4
       }
-    },
-    "1ffb79de-a789-4f62-8464-b8fc88863c73": {
-      "type": "question",
-      "blocks": {
-        "19743ca5-970d-4275-b06c-792ec9062831": {
-          "type": "question-block",
-          "settings": {
-            "question-id": "A better Blogger experience on the web",
-            "answer-id": "Since 1999, millions of people have expressed themselves on Blogger. From detailed posts about almost every apple variety you could ever imagine to a blog dedicated to the art of blogging itself, the ability to easily share, publish and express oneself on the web is at the core of Blogger’s mission. As the web constantly evolves, we want to ensure anyone using Blogger has an easy and intuitive experience publishing their content to the web. That’s why we’ve been slowly introducing an improved web experience for Blogger. Give the fresh interface a spin by clicking “Try the New Blog"
-          }
-        },
-        "2383adaf-4cda-460b-a85b-4ab0004de1b6": {
-          "type": "question-block",
-          "settings": {
-            "question-id": "An update on Google+ and Blogger",
-            "answer-id": "Following the announcement of Google+ API deprecation scheduled for March 2019, a number of changes will be made to Blogger’s Google+ integration on 4 February 2019. *Google+ widgets:* Support for the “+1 Button”, “Google+ Followers” and “Google+ Badge” widgets in Layout will no longer be available. All instances of these widgets will be removed from all blogs. *+1 buttons:* The +1\/G+ buttons and Google+ share links below blog posts and in the navigation bar will be removed."
-          }
-        },
-        "f7e7431b-f6bb-4e20-94cd-129bb29cf0ad": {
-          "type": "question-block",
-          "settings": {
-            "question-id": "It’s spring cleaning time for Blogger",
-            "answer-id": "To make room for some exciting updates coming soon to Blogger, we’re simplifying the platform to enhance the blogging experience for all of our users. Changes to existing features in Blogger *(rolling out over the next few months)*: - *Google+ Integrations:* Throughout the next few months, Blogger will transform Google+ widget integrations into HTML widgets to give you more flexibility in how you share and see your followers. - *OpenID:* Blogger previously allowed users to comment on blogs using an existing third party OpenID identity provider and has also acted as"
-          }
-        },
-        "8f476578-6f73-471d-8bc5-15d277619b69": {
-          "type": "question-block",
-          "settings": {
-            "question-id": "Share your unique style with new Blogger themes",
-            "answer-id": "If you’re one of the millions of people who uses Blogger to share your views on current affairs, teach the world how to make sushi, or just offer a peek into your day, then you know how important it is to be able to put your personal stamp on your blog. After all, your blog isn’t just a place you share, it’s a reflection of who you are and the impression you’d like to leave with your readers. To make it easier for you to express your unique style, we’ve created a new set of blog themes for you to choose from. Each theme comes in a variety of colors, is fully customizable, and can be"
-          }
-        },
-        "16e550c2-0701-48c1-befd-eae0e03ee84c": {
-          "type": "button-block",
-          "settings": {
-            "link-button-id": "afcbg",
-            "content-answer-id": "Submit"
-          }
-        }
-      },
-      "block_order": [
-        "19743ca5-970d-4275-b06c-792ec9062831",
-        "2383adaf-4cda-460b-a85b-4ab0004de1b6",
-        "f7e7431b-f6bb-4e20-94cd-129bb29cf0ad",
-        "8f476578-6f73-471d-8bc5-15d277619b69",
-        "16e550c2-0701-48c1-befd-eae0e03ee84c"
-      ],
-      "settings": {
-      }
     }
   },
   "order": [
@@ -262,7 +213,6 @@
     "b370eec5-04a0-4708-bcf3-d1126757a64a",
     "ef4d2882-ab77-4d17-b812-cbd77a9df8d9",
     "11399a78-e66d-4a24-a3cb-a1fd876a30be",
-    "82788482-6c49-4317-b2d1-cecdd0ffeca9",
-    "1ffb79de-a789-4f62-8464-b8fc88863c73"
+    "82788482-6c49-4317-b2d1-cecdd0ffeca9"
   ]
 }

@@ -1,0 +1,36 @@
+/*!***********************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/postcss-loader/dist/cjs.js!./src/components/sections/faq-page/faq-page.css ***!
+  \***********************************************************************************************************************************************************************/
+section.faq-content {
+  font-family: new-atten, sans-serif;
+  font-style: normal;
+  letter-spacing: -0.5px;
+}
+button.accordion {
+    color: #444;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+}
+/* 
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+} */
+button.accordion:after {
+    content: '\002B';
+    font-size: 23px;
+    float: right;
+    margin-left: 5px;
+}
+button.accordion.active:after {
+    content: "\2212";
+    font-size: 23px;
+}
+div.panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}

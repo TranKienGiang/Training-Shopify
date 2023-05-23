@@ -1,1 +1,13 @@
-{"sections":{"main":{"type":"main-account","settings":{"padding_top":36,"padding_bottom":36}}},"order":["main"]}
+{
+  "sections": {
+    "account_details": {
+      "type": "account-details",
+      "settings": {
+        "account_sidebar": "account-sidebar"
+      }
+    }
+  },
+  "order": [
+    "account_details"
+  ]
+}

@@ -1,0 +1,273 @@
+{{- 'section-content-banenr.css' | asset_url | stylesheet_tag -}}
+{%- capture src_url -%}
+  {{- 'section-content-banenr.js' | asset_url -}}
+{%- endcapture -%}
+{%- render 'atom_script', src: src_url, priority: 'normal', type: 'defer' -%}
+<section class="block-content">
+  {% for block in section.blocks %}
+    <div class="main">
+      <div class="top-content relative">
+        <div class="image-banner md-max:h-[360px] flex">
+          <div class="image-left md-max:w-1/2 w-1/6">
+            <img
+              class="w-full h-full"
+              src="{{block.settings.img-1-id | img_url: 'master'}}"
+              alt="">
+          </div>
+          <div class="image-right md-max:hidden w-1/6">
+            <img
+              class="w-full h-full"
+              src="{{block.settings.img-2-id | img_url: 'master'}}"
+              alt="">
+          </div>
+          <div class="image-left md-max:hidden w-1/6">
+            <img
+              class="w-full h-full"
+              src="{{block.settings.img-3-id | img_url: 'master'}}"
+              alt="">
+          </div>
+          <div class="image-left md-max:hidden w-1/6">
+            <img
+              class="w-full h-full"
+              src="{{block.settings.img-4-id | img_url: 'master'}}"
+              alt="">
+          </div>
+          <div class="image-left md-max:w-1/2 w-1/6">
+            <img
+              class="w-full h-full"
+              src="{{block.settings.img-5-id | img_url: 'master'}}"
+              alt="">
+          </div>
+          <div class="image-left md-max:hidden w-1/6">
+            <img
+              class="w-full h-full"
+              src="{{block.settings.img-6-id | img_url: 'master'}}"
+              alt="">
+          </div>
+        </div>
+        <div class="content-text w-[448px] h-[150px] md-max:max-w-[256px] md-max:h-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center bg-white">
+          <div class="relative text-center px-8 py-10">
+            <h2 class="font-medium text-lg uppercase w-full">About Yarra Trail & Marco Polo</h2>
+            <p class="content mt-2 text-sm font-normal w-full">Learn all about what makes us unique.</p>
+          </div>
+        </div>
+      </div>
+      <div class="about mt-[87px] mb-[90px] md-max:mt-[33px] md-max:mb-8 justify-center flex">
+        <div class="content-about max-w-[600px] text-center md-max:mx-5">
+          <h2 class="content m-t-[90px] text-2xl font-medium">About Yarra Trail</h2>
+          <p class="content-top text-base font-normal leading-6 mt-3 mb-4">
+            At Yarra Trail, we are passionate about creating beautiful, high-quality clothing that is both timeless and on-trend. Our team of skilled designers is dedicated to creating collections that reflect the latest fashion trends while still being wearable and versatile. Our commitment to using premium fabrics and materials ensures that our clothes look and feel amazing, making them a favourite among women everywhere.
+          </p>
+          <p class="content-bottom text-base font-normal leading-6 ">
+            Whether you're looking for everyday essentials or something special for a special occasion, you'll find it all at Yarra Trail. Our collections are designed with real women in mind, taking into consideration their busy lives, personal styles and comfort. Whether it's our signature blouses, chic dresses or cozy knitwear, every piece is crafted with care and attention to detail.
+          </p>
+        </div>
+      </div>
+      <div class="blog flex md-max:block mx-8 mb-4 md-max:mx-4">
+        <div class="left-blog-content md-max:w-full w-1/2 mr-2">
+          <img
+            class="w-full"
+            src="{{block.settings.img-sub1-id | img_url: 'master'}}"
+            alt="">
+          <div class="link-blog mt-4">
+            <a class="pb-1 border-b border-black border-solid text-base font-normal leading-6" href="#">Sustainable Style: Fashion that Cares</a>
+          </div>
+        </div>
+        <div class="right-blog-content md-max:w-full md-max:mt-4 w-1/2 md-max:ml-0 ml-2">
+          <img
+            class="w-full"
+            src="{{block.settings.img-sub2-id | img_url: 'master' }}"
+            alt="">
+          <div class="link-blog mt-[1.2rem]">
+            <a class="pb-1 border-b border-black border-solid text-base font-normal leading-6" href="#">Denim Done Right: Find Your Perfect Fit</a>
+          </div>
+        </div>
+      </div>
+      <div class="about mt-[89px] mb-[90px] md-max:mt-4 md-max:mb-8 justify-center flex">
+        <div class="content-about max-w-[600px] text-center  md-max:mx-5">
+          <p class="content-top text-base font-normal leading-6 md-max:mt-4 m-t-[90px] mb-4">
+            We are proud of our Australian heritage and are committed to sourcing materials locally whenever possible. This not only supports our local economy, but also helps us to maintain the high standards of quality and sustainability that we are Know for the are every nice .
+          </p>
+          <p class="content-bottom text-base font-normal leading-6 ">
+            At Yarra Trail, we believe that everyone deserves to feel confident and beautiful in what they wear. That's why we work hard to make sure that our clothing is both fashionable and affordable. Our goal is to make fashion accessible to all women, regardless of age, body shape or personal style.
+          </p>
+          <p class="content-bottom text-base font-normal mt-4 leading-6 ">
+            Join us on our journey to create the perfect wardrobe and make every day feel special.
+          </p>
+          <div class="button-content md-max:w-full md-max:block flex justify-center pt-6">
+            <div class="mr-2 md-max:mr-0 md-max:w-full">
+              <button class="start-shoping md-max:w-full font-bold text-sm bg-[#44464B] text-white uppercase px-6 py-2.5">start shopping</button>
+            </div>
+            <div class="ml-2 md-max:mt-3 md-max:ml-0 md-max:w-full">
+              <button class="border md-max:w-full font-bold text-sm border-solid border-[#ACACAC] find-stoclkist bg-[#FFFFFF] text-black uppercase px-6 py-2.5">find a stockist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="video">
+        <iframe
+          class="w-full h-[690px] md-max:h-[424px]"
+          src="{{block.settings.video-blog-id}}"
+          frameborder="0"></iframe>
+      </div>
+      <div class="instagram relative pb-12 mt-[50px] md-max:pt-0 md-max:mt-8 md-max:pb-8 border-b border-solid border-[#DDDDDD]">
+        <div class="heading flex md-max:block mx-8 md-max:mx-4 md-max:mb-4 justify-between mb-6">
+          <div class="font-medium md-max:text-center uppercase -tracking-[1px] text-lg">Follow @yarratrail on Instagram</div>
+        </div>
+        <div class="content md-max:mt-4 flex md-max:grid gap-4 md-max:grid-cols-2 md-max:mx-4 mx-8">
+          <div class="w-1/4 md-max:w-full rounded-sm md-max:mr-0 ">
+            <img
+              class="w-full"
+              src="{{block.settings.img-insta1-id | img_url: 'master'}}"
+              alt="">
+          </div>
+          <div class="w-1/4 md-max:w-full rounded-sm md-max:mx-0 ">
+            <img
+              class="w-full"
+              src="{{block.settings.img-insta1-id | img_url: 'master'}}"
+              alt="">
+          </div>
+          <div class="w-1/4 md-max:w-full rounded-sm md-max:mx-0">
+            <img
+              class="w-full"
+              src="{{block.settings.img-insta3-id| img_url: 'master'}}"
+              alt="">
+          </div>
+          <div class="w-1/4 md-max:w-full rounded-sm md-max:ml-0">
+            <img
+              class="w-full"
+              src="{{block.settings.img-insta4-id| img_url: 'master'}}"
+              alt="">
+          </div>
+        </div>
+        <div class="md-max:text-center -tracking-[1.5px] absolute right-8 md-max:mt-4 top-0 md-max:right-0 mad-max:text-center md-max:relative md-max:border-none font-medium md-max:text-center text-lg border-b border-solid border-[#1F2022]">
+          Follow @yarratrail</div>
+      </div>
+      <div class="instagram2 relative mt-12 md-max:mt-8 mb-[3.25rem] ">
+        <div class="heading flex mx-8 md-max:mx-4 md-max:block justify-between mb-6 md-max:mb-4">
+          <div class="font-medium md-max:text-center uppercase -tracking-[1px] text-lg">Follow @marcopoloaustralia on Instagram</div>
+        </div>
+        <div class="content flex md-max:grid md-max:grid-cols-2 gap-4 md-max:mx-4 mx-8">
+          <div class="w-1/4 md-max:w-full rounded-sm md-max:mr-0 ">
+            <img
+              class="w-full"
+              src="{{block.settings.img-insta5-id| img_url: 'master'}}"
+              alt="">
+          </div>
+          <div class="w-1/4 md-max:w-full rounded-sm md-max:mx-0">
+            <img
+              class="w-full"
+              src="{{block.settings.img-insta6-id| img_url: 'master'}}"
+              alt="">
+          </div>
+          <div class="w-1/4 md-max:w-full rounded-sm md-max:mx-0">
+            <img
+              class="w-full"
+              src="{{block.settings.img-insta7-id | img_url: 'master'}}"
+              alt="">
+          </div>
+          <div class="w-1/4 md-max:w-full rounded-sm md-max:ml-0">
+            <img
+              class="w-full"
+              src="{{block.settings.img-insta8-id| img_url: 'master'}}"
+              alt="">
+          </div>
+        </div>
+        <div class="font-medium md-max:text-center -tracking-[1.5px] absolute right-8 md-max:mt-4 top-0 md-max:right-0 mad-max:text-center md-max:relative md-max:border-none text-lg border-b border-solid border-[#1F2022]">
+          Follow @marcopoloaustralia</div>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+{% schema %}
+  {
+    "name": "Content Banner",
+    "class": "section",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "banner",
+        "name": "Banner Content",
+        "settings": [
+          {
+            "type": "image_picker",
+            "label": "image 1",
+            "id": "img-1-id"
+          },
+          {
+            "type": "image_picker",
+            "label": "image 2",
+            "id": "img-2-id"
+          },
+          {
+            "type": "image_picker",
+            "label": "image 3",
+            "id": "img-3-id"
+          },
+          {
+            "type": "image_picker",
+            "label": "image 4",
+            "id": "img-4-id"
+          }, {
+            "type": "image_picker",
+            "label": "image 5",
+            "id": "img-5-id"
+          }, {
+            "type": "image_picker",
+            "label": "image 6",
+            "id": "img-6-id"
+          }, {
+            "type": "url",
+            "label": "Url Video",
+            "id": "video-blog-id"
+          }, {
+            "type": "image_picker",
+            "label": "Image Sub 1",
+            "id": "img-sub1-id"
+          }, {
+            "type": "image_picker",
+            "label": "Image Sub 2",
+            "id": "img-sub2-id"
+          }, {
+            "type": "image_picker",
+            "label": "Image Instagram 1",
+            "id": "img-insta1-id"
+          }, {
+            "type": "image_picker",
+            "label": "Image Instagram 2",
+            "id": "img-insta2-id"
+          }, {
+            "type": "image_picker",
+            "label": "Image Instagram 3",
+            "id": "img-insta3-id"
+          }, {
+            "type": "image_picker",
+            "label": "Image Instagram 4",
+            "id": "img-insta4-id"
+          }, {
+            "type": "image_picker",
+            "label": "Image Instagram 5",
+            "id": "img-insta5-id"
+          }, {
+            "type": "image_picker",
+            "label": "Image Instagram 6",
+            "id": "img-insta6-id"
+          }, {
+            "type": "image_picker",
+            "label": "Image Instagram 7",
+            "id": "img-insta7-id"
+          }, {
+            "type": "image_picker",
+            "label": "Image Instagram 8",
+            "id": "img-insta8-id"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Content Banner"
+      }
+    ]
+  }
+{% endschema %}

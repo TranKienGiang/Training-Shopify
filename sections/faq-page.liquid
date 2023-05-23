@@ -1,0 +1,49 @@
+{{- 'section-faq-page.css' | asset_url | stylesheet_tag -}}
+{%- capture src_url -%}
+  {{- 'section-faq-page.js' | asset_url -}}
+{%- endcapture -%}
+{%- render 'atom_script', src: src_url, priority: 'normal', type: 'defer' -%}
+<section class="faq-content">
+  <div class="my-12 main flex justify-center w-full">
+    <div class="faq-accordion max-w-2xl w-full md-max:px-4">
+      <h2 class="mb-8 mt-14 md-max:mb-5 font-medium text-[18px] leading-[24px] upercase">FREQUENTLY ASKED QUESTIONS</h2>
+      {% for faq in section.blocks %}
+        <div class="faq w-full border-t border-solid border-[#DDDDDD]">
+          <button class="accordion w-full font-medium text-base pt-6">{{ faq.settings.question }}</button>
+          <div class="panel mb-5 w-full">
+            <p class="capitalize text-[14px] leading-[22px] font-normal text-[#464951]">{{ faq.settings.answer }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Accorations Faq",
+    "class": "section",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "faq",
+        "name": "Accoration Content",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Question Content",
+            "id": "question"
+          }, {
+            "type": "text",
+            "label": "Answer Content",
+            "id": "answer"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Content Faq"
+      }
+    ]
+  }
+{% endschema %}

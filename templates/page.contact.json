@@ -3,10 +3,78 @@
     "template": {
       "type": "template-page",
       "settings": {
+        "title": "",
+        "description": ""
+      }
+    },
+    "c76caadb-3961-4cf8-b9ea-a513310402e7": {
+      "type": "faq-page",
+      "blocks": {
+        "4719ae21-16ca-4757-ae73-f16346197948": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I know if an item will fit me?",
+            "answer": "We can’t always guarantee something will fit. If you are unsure about the sizing, please see our sizing chart."
+          }
+        },
+        "fe6b2d2e-746f-4fa4-9f61-f87a1b162fac": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I change my order?",
+            "answer": "fsjahfasgfhjsgfjagsfjhasgfgasghf"
+          }
+        },
+        "d49ac3db-54f3-461a-8a33-72c532bcee4e": {
+          "type": "faq",
+          "settings": {
+            "question": "Will I be charged duties and taxes on my order?",
+            "answer": "Anashd JDhashjyahkjsggf"
+          }
+        },
+        "5610a4c0-ff0d-4162-a58f-8387a19ca1f6": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I pay using cheque, Bpay or PayPal?",
+            "answer": "djasdha hhjsadjkashdkja"
+          }
+        },
+        "253eca35-ddf5-4346-8897-af892de14437": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I place an order by phone?",
+            "answer": "dbnsabdjsakjdhasjk"
+          }
+        },
+        "6f04089e-a715-4495-af94-34b8c4b59375": {
+          "type": "faq",
+          "settings": {
+            "question": "How long does it take for my order to arrive?",
+            "answer": "sadasjkdhsajkhfasjfhashjf jashdjkashdkj"
+          }
+        },
+        "52dfa4de-4ec6-4a3a-9d0b-00c60a6b8c39": {
+          "type": "faq",
+          "settings": {
+            "question": "",
+            "answer": ""
+          }
+        }
+      },
+      "block_order": [
+        "4719ae21-16ca-4757-ae73-f16346197948",
+        "fe6b2d2e-746f-4fa4-9f61-f87a1b162fac",
+        "d49ac3db-54f3-461a-8a33-72c532bcee4e",
+        "5610a4c0-ff0d-4162-a58f-8387a19ca1f6",
+        "253eca35-ddf5-4346-8897-af892de14437",
+        "6f04089e-a715-4495-af94-34b8c4b59375",
+        "52dfa4de-4ec6-4a3a-9d0b-00c60a6b8c39"
+      ],
+      "settings": {
       }
     }
   },
   "order": [
-    "template"
+    "template",
+    "c76caadb-3961-4cf8-b9ea-a513310402e7"
   ]
 }
